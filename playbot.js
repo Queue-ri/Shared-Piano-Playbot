@@ -7,6 +7,7 @@
 // @match        https://musiclab.chromeexperiments.com/Shared-Piano/
 // @icon         https://www.google.com/s2/favicons?domain=chromeexperiments.com
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
+// @require      https://unpkg.com/@tonejs/midi
 // ==/UserScript==
 /* global parcelRequire */
 
