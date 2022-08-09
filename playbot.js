@@ -13,6 +13,23 @@
 
 // const module = import('https://unpkg.com/@tonejs/data'); // 다시 실행이 안됨
 
+var input = document.createElement('input');
+input.type = 'file';
+input.accept=".mid"
+input.onchange = e => {
+   var file = e.target.files[0];
+   var path = (window.URL || window.webkitURL).createObjectURL(file);
+   getData(path)
+}
+async function getData(path) {
+   const data = await Midi.fromUrl(path); // await 안쓰면 Promise 반환됨
+   console.log(data);
+   bpm = Math.floor(data.header.tempos[0].bpm);
+   sus_interval = 480000 / bpm // 2마디
+   if (sus_interval > 3) sus_interval /= 2;
+   notes = merge(data);
+}
+
 // 7옥타브 고정. 옥타브 관련 tst 스니펫과 메모장 참고. 나중에 Promise 처리하기
 var setting = document.querySelector('piano-settings');
 setting.resizeMode = "manual";
@@ -455,13 +472,15 @@ document.addEventListener("keydown", event => {
     }
 
     if (event.key == 'm' && event.ctrlKey) {
-        const midi = window.prompt("midi (json format)", "");
-        data = JSON.parse(midi);
-        bpm = Math.floor(data.header.tempos[0].bpm);
-        sus_interval = 480000 / bpm // 2마디
-        if (sus_interval > 3) sus_interval /= 2;
-        // selected_tracks = [ data.tracks[0], data.tracks[1] ];
-        notes = merge(data);
+        input.click();
+        
+        // const midi = window.prompt("midi (json format)", "");
+        // data = JSON.parse(midi);
+        // bpm = Math.floor(data.header.tempos[0].bpm);
+        // sus_interval = 480000 / bpm // 2마디
+        // if (sus_interval > 3) sus_interval /= 2;
+        // // selected_tracks = [ data.tracks[0], data.tracks[1] ];
+        // notes = merge(data);
     }
 
     if (event.keyCode == 40) { // down
