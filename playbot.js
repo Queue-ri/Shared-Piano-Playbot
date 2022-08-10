@@ -53,7 +53,7 @@ var met_html = `
                 </svg>
             </piano-button>
 
-        <style>
+            <style>
             piano-button {
                 left: 8px;
                 position: relative;
@@ -473,7 +473,7 @@ document.addEventListener("keydown", event => {
 
     if (event.key == 'm' && event.ctrlKey) {
         input.click();
-        
+
         // const midi = window.prompt("midi (json format)", "");
         // data = JSON.parse(midi);
         // bpm = Math.floor(data.header.tempos[0].bpm);
