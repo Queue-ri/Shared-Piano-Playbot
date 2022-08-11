@@ -83,6 +83,24 @@ document.getElementById('action-buttons').insertAdjacentHTML('afterbegin', met_h
 // }
 
 
+// Transpose Indicator
+var transpose_html = `
+        <transpose-indicator>
+            <div><span><strong>Transpose: </strong></span><span id="offset-value">0</span></div>
+            <style>
+                transpose-indicator {
+                    font-size: 16px;
+                    padding: 10px 22px 10px 19px;
+                    background-color: white;
+                    border: 1px solid rgb(204, 204, 204);
+                    border-radius: 6px;
+                    width: auto;
+                }
+            </style>
+        </transpose-indicator>
+`
+document.querySelector('#footer-config > piano-instrument-selector').insertAdjacentHTML('afterend', transpose_html);
+
 
 // https://musiclab.chromeexperiments.com/Shared-Piano
 // dev tool에서 돌리면 width 따라 undefine 인식될 수 있으니 주의
@@ -511,6 +529,7 @@ document.addEventListener("keydown", event => {
             await release_all_key()
                 .then(() => {
                 in_transpose(-1)
+                document.getElementById("offset-value").textContent = offset;
                 console.log('transpose offset:',offset);
             });
         })();
@@ -521,6 +540,7 @@ document.addEventListener("keydown", event => {
             await release_all_key()
                 .then(() => {
                 in_transpose(1)
+                document.getElementById("offset-value").textContent = offset;
                 console.log('transpose offset:',offset);
             });
         })();
