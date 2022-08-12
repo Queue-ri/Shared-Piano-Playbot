@@ -102,6 +102,32 @@ var transpose_html = `
 document.querySelector('#footer-config > piano-instrument-selector').insertAdjacentHTML('afterend', transpose_html);
 
 
+// Header Sub Logo
+var sublogo_html = `
+        <sub-logo>
+            bot 1.0
+            <style>
+                sub-logo {
+                    font-family: Quicksand, sans-serif;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    color: white;
+                    text-align: center;
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    margin: auto;
+                    margin-left: 10px;
+                    padding: 5px 12px 5px 12px;
+                    background-color: #b064ff;
+                    border: none;
+                    border-radius: 7px;
+                }
+            </style>
+        </sub-logo>
+`
+document.querySelector('piano-logo').shadowRoot.getElementById('header-logo').insertAdjacentHTML('afterend', sublogo_html);
+
+
 // https://musiclab.chromeexperiments.com/Shared-Piano
 // dev tool에서 돌리면 width 따라 undefine 인식될 수 있으니 주의
 // p# = piano octave # (ex. p3 == piano octave 3)
