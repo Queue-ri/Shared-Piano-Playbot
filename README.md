@@ -16,15 +16,14 @@ Please click the gif below to watch full video :)
 3. Tampermonkey will automatically run Playbot script if you visit Shared Piano webpage.
 
 ## How to Use
-1. Convert your midi files to json format by online [Tone.js parser](https://tonejs.github.io/Midi/).
-2. Open Shared Piano webpage and press `ctrl + m`.
-3. Copy and paste the conversion result from step 1.
-4. Hit `Enter` to close the prompt.
+1. Open Shared Piano webpage and press `ctrl + m`.
+3. Select your midi file from the file explorer.
+4. Hit `Enter` to start playing. (please wait for a second)
 
 ## Shortcuts
 ### Main control
-- File input prompt: `ctrl + m`
-- Start play: `Enter`
+- Open file explorer: `ctrl + m`
+- Start playing: `Enter`
 
 ### Transpose
 No need to press `shift` key.
@@ -46,7 +45,7 @@ Sustain will automatically be turned on.
   - It will be fixed if you immediately turn off the sustain with `←` key for a bit.
 
 ## WIP
-- Direct midi file convert
+- ~~Direct midi file convert~~ ✅ **Support since v1.0!**
 - Velocity
 
 #### WIP but not soon
