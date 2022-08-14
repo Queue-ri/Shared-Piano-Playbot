@@ -3,7 +3,7 @@
 
 ## Play Demo
 Please click the gif below to watch full video :)
-[![demo_gif](https://user-images.githubusercontent.com/77003554/159623878-9fda1a37-2a63-4083-9e8e-d80370e9b8d2.gif)](https://drive.google.com/file/d/1dS4MlRR99HgbsLJRNkq3f_zXNYKzgvP0/view?usp=sharing)
+[![playbot_demo](https://user-images.githubusercontent.com/77003554/184627712-c3ebbe96-7f9f-4f0c-a312-c6143e20d4cc.gif)](https://drive.google.com/file/d/1zJCgLY74Kt_SCeB8_HkQp3melCtlrFpe/view?usp=sharing)
 
 ## Main Features
 - Auto-play midi files
